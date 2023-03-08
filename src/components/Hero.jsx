@@ -1,13 +1,13 @@
 import React from "react";
-// import { map } from "../assets";
 import { BsList, BsSearch } from "react-icons/bs";
-
 import { propertyList } from "../constants";
-
 import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import iconMarker from "leaflet/dist/images/marker-icon.png";
+import iconRetina from "leaflet/dist/images/marker-icon-2x.png";
+import iconShadow from "leaflet/dist/images/marker-shadow.png";
 
 //This function is used to move the location on the map to the selected location
 function MyComponent({ location }) {
@@ -19,6 +19,11 @@ function MyComponent({ location }) {
 }
 
 const Hero = ({ handleChange, location }) => {
+  const icon = L.icon({
+    iconRetinaUrl: iconRetina,
+    iconUrl: iconMarker,
+    shadowUrl: iconShadow,
+  });
   //Animation effect
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -48,7 +53,7 @@ const Hero = ({ handleChange, location }) => {
               attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={location}></Marker>
+            <Marker position={location} icon={icon}></Marker>
             <MyComponent location={location} />
           </MapContainer>
 
