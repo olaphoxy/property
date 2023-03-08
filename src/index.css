@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Inter:wght@400;500;700&family=Quicksand:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=EB+Garamond&family=Inter:wght@400;500;700&family=Quicksand:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=EB+Garamond&family=Inter:wght@400;500;700&family=Poppins:wght@400;500;700&family=Quicksand:wght@400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.black-gradient {
+  background: linear-gradient(
+    200.44deg,
+    rgba(0, 0, 0, 0.0001) 16.41%,
+    rgba(0, 0, 0, 0.51) 77.16%
+  );
+}
+
+.paginationsBttns {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid #e8e8e8; */
+}
+
+.paginationsBttns a {
+  padding: 15px;
+
+  border-radius: 5px;
+  border: 1.5px solid #e8e8e8;
+  color: #f4511e;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #fff;
+  cursor: pointer;
+}
+.paginationsBttns a:hover {
+  background-color: #f4511e;
+  color: #fff;
+}
+.paginationActive a {
+  background-color: #f4511e;
+  color: #fff;
+}
+
+.shadows {
+  box-shadow: 0px 4px 63px rgba(0, 0, 0, 0.15);
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.primaryHover:hover {
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001, inset 0px 0px 0px 0px #fff9,
+    inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9,
+    inset 0px 0px 0px 0px #0001;
+  transition: box-shadow 0.3s cubic-bezier(0.79, 0.21, 0.06, 0.81);
+  border-radius: 10px;
+
+  -webkit-transform: translateY(-1px);
+  transform: translateY(-1px);
+}
+
+button.shake {
+  animation: shake 1s infinite;
+}
+@keyframes shake {
+  0% {
+    transform: translate(2px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-2deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(3deg);
+  }
+  30% {
+    transform: translate(0px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(2px, 1px) rotate(-2deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(4deg);
+  }
+  90% {
+    transform: translate(2px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
